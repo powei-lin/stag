@@ -4,7 +4,7 @@
 int main() {
   cv::Mat image = cv::imread("00000.png", cv::IMREAD_GRAYSCALE);
 
-  Stag stag(15, 7, true);
+  Stag stag(11, 7, true);
 
   stag.detectMarkers(image);
   stag.logResults("");
