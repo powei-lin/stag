@@ -1,5 +1,8 @@
 #include "Drawer.h"
 #include "colors.h"
+#include <opencv2/imgproc/types_c.h>
+#include <opencv2/imgproc/imgproc_c.h>
+#include <opencv2/imgcodecs/legacy/constants_c.h>
 
 using cv::Mat;
 using cv::Point2d;

@@ -3,9 +3,10 @@
 #include <math.h>
 #include <stdio.h>
 
-#include <opencv/cv.h>
-#include <opencv/cxcore.h>
-#include <opencv/highgui.h>
+#include <opencv2/core.hpp>
+#include <opencv2/highgui.hpp>
+#include <opencv2/imgproc/types_c.h>
+#include <opencv2/imgproc/imgproc_c.h>
 
 // Burak - commented the line below
 //#include "ImageVideoLib.h"
