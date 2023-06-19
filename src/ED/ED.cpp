@@ -153,9 +153,9 @@ EdgeMap *DetectEdgesByEDPF(unsigned char *srcImg, int width, int height, double 
 #endif
 
   // Clean up
-  delete gradImg;
-  delete dirImg;
-  delete smoothImg;
+  delete[] gradImg;
+  delete[] dirImg;
+  delete[] smoothImg;
 
   return map;
 } //DetectEdgesByEDPF
@@ -227,9 +227,9 @@ EdgeMap *DetectEdgesByCannySR(unsigned char *srcImg, int width, int height, int 
   void JoinAnchorPointsUsingSortedAnchors(short *gradImg, unsigned char *dirImg, EdgeMap *map, int GRADIENT_THRESH, int MIN_PATH_LEN);
   JoinAnchorPointsUsingSortedAnchors(gradImg, dirImg, map, 1, 10);
 
-  delete smoothImg;
-  delete gradImg;
-  delete dirImg;
+  delete[] smoothImg;
+  delete[] gradImg;
+  delete[] dirImg;
 
   cvReleaseImage(&iplImg);
   cvReleaseImage(&edgeImg);
@@ -647,10 +647,10 @@ EdgeMap *DetectContourEdgeMapByED3(unsigned char *srcImg, unsigned char *contour
   JoinAnchorPointsUsingSortedAnchors(gradImg, dirImg, map, 1, 10);
 
   // Clean up
-  delete smoothImg;
-  delete smoothContourImg;
-  delete gradImg;
-  delete dirImg;
+  delete[] smoothImg;
+  delete[] smoothContourImg;
+  delete[] gradImg;
+  delete[] dirImg;
 
   return map;
 } //end-DetectContourEdgeMapByED3
